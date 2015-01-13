@@ -10,8 +10,12 @@ var User = function(name, email, pw){
   this.name = name;
   this.email = email;
   this.pw = pw;
-  users.push(this);
+  // users.push(this);
 }
+
+var addUser = function (name, email, pw) {
+  users.push(new User(name, email, pw));
+};
 
 //Create an Array called 'users' that will store all our instances of User.
 
@@ -22,11 +26,12 @@ var User = function(name, email, pw){
 //the data from above in that exact order
 
   //code here
-new User('Tyler', 'tylermcginnis33@gmail.com', 'iLoveJS');
-new User('Cahlan', 'cahlan@devmouna.in', 'iLoveHashtags');
-new User('Lenny', 'lenny@theLenster.com', 'iLoveLentilSoup');
 
-console.log('Tyler\'s information is ' + users[0].name + ', ' + users[0].email + ', & ' + users[0].pw);
+addUser('Tyler', 'tylermcginnis33@gmail.com', 'iLoveJS');
+addUser('Cahlan', 'cahlan@devmouna.in', 'iLoveHashtags');
+addUser('Lenny', 'lenny@theLenster.com', 'iLoveLentilSoup');
+
+console.log('Tyler\'s information is ', users[0]);
 //Console.log all of Tylers information
 
   //code here
@@ -39,7 +44,7 @@ console.log('Tyler\'s information is ' + users[0].name + ', ' + users[0].email +
   
 // usersInfo(users, 'Tyler', function())
 
-console.log('Lenny\'s information is ' + users[2].name + ', ' + users[2].email + ', & ' + users[2].pw);
+console.log('Lenny\'s information is ', users[2]);
 //Now console.log all of Lennys information
 
   //code here
@@ -49,7 +54,7 @@ console.log('Lenny\'s information is ' + users[2].name + ', ' + users[2].email +
 //that to your users array.
 
   //code here
-new User('Skoot', 'smmiller.work@gmail.com', 'iLoveAsh');
+addUser('Skoot', 'smmiller.work@gmail.com', 'iLoveAsh');
 
 
 
@@ -58,5 +63,5 @@ console.log('All my users names are ' );
 
   //code here
 for (var i = 0; i < users.length; i++) {
-  console.log('All my users names are ' + ' ' + users[0].name + ', ' + users[1].name + ', ' + users[2].name + ', & ' + users[3].name);
+  console.log(users[i].name);
 };
