@@ -63,5 +63,5 @@ console.log('All my users names are ' );
 
   //code here
 for (var i = 0; i < users.length; i++) {
-  console.log(users[i].name);
+  console.log('All my users names are ' + users[i].name);
 };
